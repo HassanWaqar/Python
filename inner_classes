@@ -1,0 +1,23 @@
+class laptop:
+
+    def __init__(self,name,color):
+        self.name = name
+        self.color = color
+        self.lap = self.specifications()
+
+    def show(self):
+        print("Laptop name is ", self.name," with color ", self.color)
+        self.lap.show()
+
+    class specifications:
+
+        def __init__(self):
+            self.ram = '8gb'
+            self.processor = 'Core i5'
+            self.graphics = '1GB builtin card'
+
+        def show(self):
+            print("Laptop ", "has specifications", self.ram," ram", self.processor," processor",self.graphics, " graphics card")
+
+l1 = laptop('hp','Metallic grey')
+l1.show()
