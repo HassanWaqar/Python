@@ -1,0 +1,24 @@
+from abc import ABC, abstractmethod
+
+
+class Computer(ABC):  # class computer is subclass of ABC(Abstract Base Class)
+    @abstractmethod
+    def process(self):
+        pass
+
+
+class laptop(Computer):
+    def process(self):
+        print("its runnning")
+        
+
+
+class whiteboard(Computer):  # it is necessary for every subclass of abstract class to have same abstract method
+    def process(self):
+        print("Working")
+
+
+c1 = laptop()
+c1.process()
+w1 = whiteboard()
+w1.process()
