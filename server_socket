@@ -1,0 +1,20 @@
+import socket
+
+s = socket.socket()
+print("Socket created")
+
+# to bind a socket with port number we use bind()and pass server name and port num b/w 0 to 65535
+
+s.bind(('localhost', 9999))
+#how many clients you want to connect
+s.listen(3)
+print("waiting for connections")
+
+while True:
+    #below code give us client socket and address
+    c,addr  = s.accept()
+    name = c.recv(1024).decode()
+    print("connected with", addr,name)
+
+    #after this,we heave to send something to client
+    c.send(bytes(" Welcome to telusko",'utf-8'))
