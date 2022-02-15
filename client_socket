@@ -1,0 +1,12 @@
+import socket
+#create socket for client
+c = socket.socket()
+c.connect(('localhost',9999))
+
+name = input("Enter your name ")
+c.send(bytes(name,'utf-8'))
+#to recieve data from server we use recv() and pass buffer size int it.
+#data is coming in bytes as b' printing with output, to convert it into string, use decode
+print(c.recv(1024).decode())
+#to this on two machines write client code on one and server code on other and change local host by ip addressesS
+
