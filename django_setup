@@ -1,0 +1,32 @@
+#check python version
+python --version
+
+#check pip version
+pip --version
+#upgrade pip
+
+#check django version
+django-admin --version
+
+#create virtual environment
+pip install virtualenvwrapper-win
+
+#test the environment
+mkvirtualenv test
+
+#make folder for proects
+mkdir projects
+
+#enter the folder projects
+cd projects
+
+#start project---telsuko is proect name
+django-admin startproject telusko
+
+#come in telsuko project folder
+cd telusko
+
+#run the server
+python manage.py runserver
+#write the ip address on browser
+
