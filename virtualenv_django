@@ -1,0 +1,19 @@
+#to create virtual environment
+pip install pipenv
+
+#to run virtual environment
+pipenv shell
+
+#install django
+pipenv install django
+
+#create project
+django-admin startproject pollster
+#to run he server
+python manage.py runserver 8081
+
+#to migrate tables
+python manage.py migrate
+
+#to start application
+python manage.py startapp polls
