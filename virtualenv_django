@@ -1,3 +1,4 @@
+
 #to create virtual environment
 pip install pipenv
 
@@ -17,3 +18,22 @@ python manage.py migrate
 
 #to start application
 python manage.py startapp polls
+
+
+#pollster.setting.py
+#add the application name in INSTALLED_APPS['polls',]
+
+#to print any thing on the screen write in view
+#to use http you have to import it
+
+froom django.http import HttpResponse
+def learn_django(request):
+    return HttpResponse("Hello World")
+    
+#in pollster.urls.py we have to add path file
+from django.urls import path
+from polls import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('learn_dj/', views.learn_django),
+]
